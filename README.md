@@ -27,7 +27,7 @@ Images
 
 
 Link
-[Visit website](file:///Users/ahmadal-karzoun/code/PasswordGenerator/index.html "Password Generator"
+[Visit website](https://karzoun.github.io/CodeQuiz/ "Code Quiz"
 )
 
 

@@ -1,12 +1,22 @@
 //create list of questions
 var questions = [{
-        title: "what is (2*2)",
+        title: "What is the size of byte variable?",
         choices: ["1", "8", "16", "4"],
-        answer: "4"
+        answer: "8"
     },
     {
-        title: "How many times did the seahawks win the superbowl?",
-        choices: ["3", "1", "14", "0"],
-        answer: "1"
+        title: "Is an empty .java file a valid source file",
+        choices: ["true", "false"],
+        answer: "true"
+    },
+    {
+        title: "Is it necessary that each try block must be followed by a catch block?",
+        choices: ["true", "false"],
+        answer: "false"
+    },
+    {
+        title: " which operator is considered to be with highest precedence?",
+        choices: [" () , []", "=", "%", "?"],
+        answer: " () , []"
     }
 ];
