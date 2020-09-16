@@ -1,3 +1,6 @@
+var highscores =
+    JSON.parse(window.localStorage.getItem("highscores")) || [];
+
 var startQuiz = function() {
     //hide the start screen
     document.querySelector("#start-screen").classList.add("hide");
@@ -91,3 +94,53 @@ document.querySelector("body").addEventListener("click", function(event) {
         processAnswer(event);
     }
 });
+
+document.querySelector('#submit').addEventListener('click', function(event) {
+    saveHighscore()
+
+})
+
+var initialsEl = document.querySelector('#initials')
+
+
+
+
+
+
+var saveHighscore = function() {
+    // get value of input box
+    var initials = initialsEl.value.trim();
+    console.log(initials)
+
+
+
+    // make sure value wasn't empty
+    if (initials !== "") {
+        // get saved scores from localstorage, or if not any, set to empty array
+
+
+        // format new score object for current user
+        var newScore = {
+            score: time,
+            initials: initials
+        };
+
+        // save to localstorage
+        highscores.push(newScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+        // redirect to next page
+        window.location.href = "highscores.html";
+    }
+}
+
+var checkForEnter = function(event) {
+    console.log('check for enter')
+        // "13" represents the enter key
+    if (event.key === "Enter") {
+        saveHighscore();
+    }
+}
+
+// user clicks button to submit initials
+// submitBtn.onclick = saveHighscore;
